@@ -1,90 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
     <!-- HEADER -->
     <!-- <header class="fixed top-0 left-0 w-full bg-red-600 h-24 md:h-16 flex items-center justify-center z-50">
         <h1 class="text-white text-2xl md:text-xl font-bold">GO! TACOS</h1>
     </header> -->
     <header class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between h-24 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between h-24 px-6">
 
-    <!-- DIV 1: Logo + Nombre -->
-    <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-      <!-- Logo -->
-      <div class="w-12 h-12">
-        <img src="./assets/img/logo-light.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
-        <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
-      </div>
-      <!-- Nombre -->
-      <div class="ml-3 text-2xl font-bold flex items-center">
-        <span class="text-red-600">GO!</span>
-        <span class="ml-1 text-gray-900 dark:text-white">TACOS</span>
-      </div>
-    </div>
+            <!-- DIV 1: Logo + Nombre -->
+            <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <!-- Logo -->
+                <div class="w-12 h-12">
+                    <img src="./assets/img/logo-light.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
+                    <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
+                </div>
+                <!-- Nombre -->
+                <div class="ml-3 text-2xl font-bold flex items-center">
+                    <span class="text-red-600">GO!</span>
+                    <span class="ml-1 text-gray-900 dark:text-white">TACOS</span>
+                </div>
+            </div>
 
-    <!-- DIV 2: Menú de secciones (Desktop) -->
-    <nav class="hidden md:flex space-x-6 text-gray-900 dark:text-white font-medium">
-      <a href="#entrantes" class="hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
-      <a href="#tacos" class="hover:text-red-600 dark:hover:text-red-500">Tacos</a>
-      <a href="#hamburguesas" class="hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
-      <a href="#pizzas" class="hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
-      <a href="#bebidas" class="hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
-      <a href="#postres" class="hover:text-red-600 dark:hover:text-red-500">Postres</a>
-    </nav>
+            <!-- DIV 2: Menú de secciones (Desktop) -->
+            <nav class="hidden md:flex space-x-6 text-gray-900 dark:text-white font-medium">
+                <a href="#entrantes" class="hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
+                <a href="#tacos" class="hover:text-red-600 dark:hover:text-red-500">Tacos</a>
+                <a href="#hamburguesas" class="hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
+                <a href="#pizzas" class="hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
+                <a href="#bebidas" class="hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
+                <a href="#postres" class="hover:text-red-600 dark:hover:text-red-500">Postres</a>
+            </nav>
 
-    <!-- DIV 3: Dark Mode (Desktop) + Botón menú móvil -->
-    <div class="flex items-center space-x-2">
-      <!-- Botón Dark Mode (Desktop) -->
-      <button id="theme-toggle-desktop" class="p-2 rounded bg-gray-200 dark:bg-gray-800 hidden md:block">
-        <svg id="icon-light" class="w-6 h-6 dark:hidden" fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="..."/>
-        </svg>
-        <svg id="icon-dark" class="w-6 h-6 hidden dark:block" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="..."/>
-        </svg>
-      </button>
+            <!-- DIV 3: Dark Mode (Desktop) + Botón menú móvil -->
+            <div class="flex items-center space-x-2">
+                <!-- Botón Dark Mode (Desktop) -->
+                <button id="theme-toggle-desktop" class="p-2 rounded bg-gray-200 dark:bg-gray-800 hidden md:block">
+                    <svg id="icon-light" class="w-6 h-6 dark:hidden" fill="black" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path d="..." />
+                    </svg>
+                    <svg id="icon-dark" class="w-6 h-6 hidden dark:block" fill="white"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="..." />
+                    </svg>
+                </button>
 
-      <!-- Botón menú móvil -->
-      <button id="mobile-menu-btn" class="p-2 rounded bg-gray-200 dark:bg-gray-800 md:hidden">
-        <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M3 6h18M3 12h18M3 18h18"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+                <!-- Botón menú móvil -->
+                <button id="mobile-menu-btn" class="p-2 rounded bg-gray-200 dark:bg-gray-800 md:hidden">
+                    <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-  <!-- Menú móvil desplegable -->
-  <nav id="mobile-menu" class="hidden flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 py-4 space-y-2 md:hidden">
-    <a href="#entrantes" class="block hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
-    <a href="#tacos" class="block hover:text-red-600 dark:hover:text-red-500">Tacos</a>
-    <a href="#hamburguesas" class="block hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
-    <a href="#pizzas" class="block hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
-    <a href="#bebidas" class="block hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
-    <a href="#postres" class="block hover:text-red-600 dark:hover:text-red-500">Postres</a>
+        <!-- Menú móvil desplegable -->
+        <nav id="mobile-menu"
+            class="hidden flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 py-4 space-y-2 md:hidden">
+            <a href="#entrantes" class="block hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
+            <a href="#tacos" class="block hover:text-red-600 dark:hover:text-red-500">Tacos</a>
+            <a href="#hamburguesas" class="block hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
+            <a href="#pizzas" class="block hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
+            <a href="#bebidas" class="block hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
+            <a href="#postres" class="block hover:text-red-600 dark:hover:text-red-500">Postres</a>
 
-    <!-- Botón Dark Mode (Móvil) -->
-    <button id="theme-toggle-mobile" class="mt-2 p-2 rounded bg-gray-200 dark:bg-gray-800 w-full flex items-center justify-center">
-      <svg id="icon-light-mobile" class="w-6 h-6 dark:hidden" fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="..."/>
-      </svg>
-      <svg id="icon-dark-mobile" class="w-6 h-6 hidden dark:block" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="..."/>
-      </svg>
-    </button>
-  </nav>
-</header>
+            <!-- Botón Dark Mode (Móvil) -->
+            <button id="theme-toggle-mobile"
+                class="mt-2 p-2 rounded bg-gray-200 dark:bg-gray-800 w-full flex items-center justify-center">
+                <svg id="icon-light-mobile" class="w-6 h-6 dark:hidden" fill="black" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path d="..." />
+                </svg>
+                <svg id="icon-dark-mobile" class="w-6 h-6 hidden dark:block" fill="white"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="..." />
+                </svg>
+            </button>
+        </nav>
+    </header>
 
 
+    <!-- NO ES SEGURO -->
+    <section
+        class="h-screen flex flex-col items-center justify-center bg-red-600 dark:bg-gray-900 text-white text-center px-4">
+
+        <!-- Logos claro/oscuro -->
+        <img src="./assets/img/logo-light.svg" class="dark:hidden w-32 md:w-48 mb-4" alt="Logo Claro">
+        <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-32 md:w-48 mb-4" alt="Logo Oscuro">
+
+        <!-- Nombre del local -->
+        <h1 class="text-4xl md:text-6xl font-bold mb-2">
+            GO! <span class="text-white dark:text-red-500">TACOS</span>
+        </h1>
+
+        <!-- Oferta -->
+        <p class="text-xl md:text-2xl font-semibold">
+            Los martes y jueves tu taco por tan solo <span class="text-yellow-300">5€</span>!
+        </p>
+
+        <!-- Botón ver menú (opcional) -->
+        <a href="#menu"
+            class="mt-6 px-6 py-3 bg-white dark:bg-gray-800 text-red-600 dark:text-white rounded-full font-bold hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+            Ver menú
+        </a>
+
+    </section>
 
 
 
     <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>
