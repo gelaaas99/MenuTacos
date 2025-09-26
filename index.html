@@ -17,12 +17,26 @@
         <div class="max-w-7xl mx-auto flex items-center justify-between h-24 px-6">
 
             <!-- DIV 1: Logo + Nombre -->
-            <div class="flex items-center cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            <div class="flex items-center cursor-pointer hidden md:flex" onclick="window.scrollTo({top:0, behavior:'smooth'})">
                 <!-- Logo -->
                 <div class="w-12 h-12">
                     <img src="./assets/img/logo-light.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
                     <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
                 </div>
+                <!-- Nombre -->
+                <div class="ml-3 text-2xl font-bold flex items-center">
+                    <span class="text-red-600">GO!</span>
+                    <span class="ml-1 text-gray-900 dark:text-white">TACOS</span>
+                </div>
+            </div>
+            <div class="flex items-center cursor-pointer md:hidden flex" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                <!-- Logo -->
+                <div class="w-12 h-12">
+                    <img src="./assets/img/logo-light.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
+                    <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
+                </div>
+            </div>
+            <div class="flex items-center cursor-pointer md:hidden flex" onclick="window.scrollTo({top:0, behavior:'smooth'})">
                 <!-- Nombre -->
                 <div class="ml-3 text-2xl font-bold flex items-center">
                     <span class="text-red-600">GO!</span>
