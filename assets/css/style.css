@@ -619,16 +619,16 @@ video {
   height: 6rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
 }
 
 .w-12 {
@@ -865,10 +865,6 @@ video {
     display: none;
   }
 
-  .md\:h-16 {
-    height: 4rem;
-  }
-
   .md\:w-48 {
     width: 12rem;
   }
@@ -881,10 +877,5 @@ video {
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 }
