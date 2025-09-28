@@ -8,8 +8,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-white dark:bg-gray-900 text-black dark:text-white">
-    <header class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow z-50">
+<body class="bg-[#FFF8F0] dark:bg-gray-900 text-black dark:text-white">
+    <header class="fixed top-0 left-0 w-full dark:bg-[#FFF8F0]/10 bg-gray-900/30 z-50 shadow-md dark:shadow-light">
         <div class="max-w-7xl mx-auto flex items-center justify-between h-24 px-6">
 
             <!-- DIV 1: Logo + Nombre -->
@@ -68,7 +68,7 @@
                 <button id="mobile-menu-btn" class="p-2 rounded bg-gray-200 dark:bg-gray-800 md:hidden">
                     <!-- Menú hamburguesa para modo oscuro -->
                     <img src="assets/img/menu-white.svg" alt="Menú oscuro" class="w-6 hidden dark:block" />
-                    
+
                     <!-- Menú hamburguesa para modo claro -->
                     <img src="assets/img/menu-black.svg" alt="Menú claro" class="w-6 block dark:hidden" />
                 </button>
@@ -78,12 +78,12 @@
         <!-- Menú móvil desplegable -->
         <nav id="mobile-menu"
             class="hidden flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-4 py-4 space-y-2 md:hidden">
-            <a href="#entrantes" class="block hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
-            <a href="#tacos" class="block hover:text-red-600 dark:hover:text-red-500">Tacos</a>
-            <a href="#hamburguesas" class="block hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
-            <a href="#pizzas" class="block hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
-            <a href="#bebidas" class="block hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
-            <a href="#postres" class="block hover:text-red-600 dark:hover:text-red-500">Postres</a>
+            <a href="#inicio" class="block hover:text-red-600 dark:hover:text-red-500">Inicio</a>
+            <a href="#carta" class="block hover:text-red-600 dark:hover:text-red-500">Carta</a>
+            <a href="#promociones" class="block hover:text-red-600 dark:hover:text-red-500">Promocion</a>
+            <a href="#ubicacion" class="block hover:text-red-600 dark:hover:text-red-500">Ubicación</a>
+            <a href="#contacto" class="block hover:text-red-600 dark:hover:text-red-500">Contacto</a>
+
 
             <!-- Botón Dark Mode (Móvil) -->
             <button id="theme-toggle-mobile"
@@ -95,11 +95,45 @@
                 <img src="assets/img/moon.svg" alt="Modo claro" class="w-6 block dark:hidden" />
             </button>
         </nav>
+
     </header>
 
 
+    <!-- INICIO -->
+    <section class="relative w-full h-screen bg-cover md:bg-contain bg-no-repeat bg-center" style="background-image: url('./assets/img/GOKU.png');">
+        <!-- Overlay para mejorar contraste -->
+        <div class="absolute inset-0 bg-white/30 dark:bg-black/50"></div>
+
+        <!-- Contenido centrado -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+
+            <!-- Logos claro/oscuro -->
+            <img src="./assets/img/logo-light.svg" class="dark:hidden w-32 md:w-48 mb-4" alt="Logo Claro">
+            <img src="./assets/img/logo-dark.svg" class="hidden dark:block w-32 md:w-48 mb-4" alt="Logo Oscuro">
+
+            <h1 class="text-4xl md:text-6xl font-bold text-white dark:text-gray-100">
+                Carta Digital de Tacos 🌮
+            </h1>
+            <p class="mt-4 text-lg md:text-2xl text-gray-200 dark:text-gray-300 max-w-2xl">
+                Descubre nuestros tacos, combos y mucho más al instante.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4">
+                <a href="#menu"
+                    class="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition">
+                    Ver menú
+                </a>
+                <a href="https://github.com/tu-repo" target="_blank"
+                    class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:bg-gray-900 transition">
+                    Ver en GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+
     <!-- NO ES SEGURO -->
-    <section class="h-screen flex flex-col items-center justify-center bg-red-600 dark:bg-gray-900 text-white text-center px-4">
+    <section
+        class="h-screen flex flex-col items-center justify-center bg-red-600 dark:bg-gray-900 text-white text-center px-4">
 
         <!-- Logos claro/oscuro -->
         <img src="./assets/img/logo-light.svg" class="dark:hidden w-32 md:w-48 mb-4" alt="Logo Claro">
@@ -107,7 +141,7 @@
 
         <!-- Nombre del local -->
         <h1 class="text-4xl md:text-6xl font-bold mb-2">
-            GO! <span class="text-white dark:text-red-500">TACOS</span>
+            <span class="text-white dark:text-red-500">GO!</span> TACOS
         </h1>
 
         <!-- Oferta -->
