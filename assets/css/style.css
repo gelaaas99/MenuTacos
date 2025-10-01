@@ -555,15 +555,27 @@ video {
 }
 
 body {
-  background-image: url('/assets/img/fondo-white.webp');
+  position: relative;
   background-size: 256px 256px;
   background-repeat: repeat;
+  background-image: url('/assets/img/fondo-white.webp');
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background-color: rgb(255 255 255 / 0.6);
+  z-index: -1;
+  /* detrás del contenido */
 }
 
 html.dark body {
   background-image: url('/assets/img/fondo-black.webp');
-  background-size: 256px 256px;
-  background-repeat: repeat;
+}
+
+html.dark body::before {
+  background-color: rgb(0 0 0 / 0.6);
 }
 
 .fixed {
@@ -900,6 +912,16 @@ html.dark body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* @layer base {
+    body {
+        @apply bg-[url('/assets/img/fondo-white.webp')] bg-repeat bg-[length:256px_256px];
+    }
+
+    html.dark body {
+        @apply bg-[url('/assets/img/fondo-black.webp')] bg-repeat bg-[length:256px_256px];
+    }
+} */
 
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;

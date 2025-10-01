@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
     body {
         @apply bg-[url('/assets/img/fondo-white.webp')] bg-repeat bg-[length:256px_256px];
     }
 
     html.dark body {
         @apply bg-[url('/assets/img/fondo-black.webp')] bg-repeat bg-[length:256px_256px];
+    }
+} */
+
+@layer base {
+    body {
+        @apply relative bg-repeat bg-[length:256px_256px];
+        background-image: url('/assets/img/fondo-white.webp');
+    }
+
+    body::before {
+        content: "";
+        @apply absolute inset-0 bg-white/60;
+        z-index: -1;
+        /* detrás del contenido */
+    }
+
+    html.dark body {
+        background-image: url('/assets/img/fondo-black.webp');
+    }
+
+    html.dark body::before {
+        @apply bg-black/60;
     }
 }
