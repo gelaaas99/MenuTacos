@@ -2,20 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-    body {
-        @apply bg-[url('/assets/img/fondo-white.webp')] bg-repeat bg-[length:256px_256px];
-    }
 
-    html.dark body {
-        @apply bg-[url('/assets/img/fondo-black.webp')] bg-repeat bg-[length:256px_256px];
-    }
-} */
 
 @layer base {
     body {
         @apply relative bg-repeat bg-[length:256px_256px];
-        background-image: url('/assets/img/fondo-white.webp');
+        background-image: url('./assets/img/fondo-white.webp');
     }
 
     body::before {
@@ -26,10 +18,21 @@
     }
 
     html.dark body {
-        background-image: url('/assets/img/fondo-black.webp');
+        background-image: url('./assets/img/fondo-black.webp');
     }
 
     html.dark body::before {
         @apply bg-black/60;
     }
 }
+
+
+/* @layer base {
+    body {
+        @apply bg-[url('/assets/img/fondo-white.webp')] bg-repeat bg-[length:256px_256px];
+    }
+
+    html.dark body {
+        @apply bg-[url('/assets/img/fondo-black.webp')] bg-repeat bg-[length:256px_256px];
+    }
+} */

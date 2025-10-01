@@ -558,7 +558,7 @@ body {
   position: relative;
   background-size: 256px 256px;
   background-repeat: repeat;
-  background-image: url('/assets/img/fondo-white.webp');
+  background-image: url('./assets/img/fondo-white.webp');
 }
 
 body::before {
@@ -571,7 +571,7 @@ body::before {
 }
 
 html.dark body {
-  background-image: url('/assets/img/fondo-black.webp');
+  background-image: url('./assets/img/fondo-black.webp');
 }
 
 html.dark body::before {
