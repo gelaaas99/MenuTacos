@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply relative bg-repeat bg-[length:256px_256px];
+        @apply relative bg-repeat bg-[length:320px_160px];/* 512px_256px */
         background-image: url('../img/fondo-white.webp');
     }
 

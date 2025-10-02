@@ -556,8 +556,9 @@ video {
 
 body {
   position: relative;
-  background-size: 256px 256px;
+  background-size: 320px 160px;
   background-repeat: repeat;
+  /* 512px_256px */
   background-image: url('../img/fondo-white.webp');
 }
 
