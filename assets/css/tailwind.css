@@ -4,9 +4,9 @@
 
 
 
-@layer base {
+/* @layer base {
     body {
-        @apply relative bg-repeat bg-[length:320px_160px];/* 512px_256px */
+        @apply relative bg-repeat bg-[length:320px_160px];/* 512px_256px *//*
         background-image: url('../img/fondo-white.webp');
     }
 
@@ -14,7 +14,7 @@
         content: "";
         @apply absolute inset-0 bg-white/60;
         z-index: -1;
-        /* detrás del contenido */
+        /* detrás del contenido *//*
     }
 
     html.dark body {
@@ -24,6 +24,31 @@
     html.dark body::before {
         @apply bg-black/60;
     }
+} */
+
+@layer base {
+  body {
+    @apply relative z-0 min-h-screen; /* Asegura que el body tenga altura y contexto de posición */
+  }
+
+  body::after {
+    content: "";
+    display: block; /* NECESARIO para que el pseudo-elemento se renderice */
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('../img/fondo-white.webp');
+    background-repeat: repeat;
+    background-size: 320px 160px;
+    background-position: center;
+    opacity: 0.2; /* Controla la translucidez */
+    pointer-events: none;
+  }
+
+  html.dark body::after {
+    background-image: url('../img/fondo-black.webp');
+    opacity: 0.2;
+  }
 }
 
 

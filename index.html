@@ -8,8 +8,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
+<!-- bg-[#FFF8F0]/10 dark:bg-gray-900/80 -->
 <body class="bg-[#FFF8F0] dark:bg-gray-900 text-black dark:text-white">
-    <header class="fixed top-0 left-0 w-full dark:bg-[#FFF8F0]/10 bg-gray-900/30 z-50 shadow-md dark:shadow-light">
+    <header class="fixed top-0 left-0 w-full bg-[#FFF8F0]/10 dark:bg-[#3b3c47]/80 z-50 shadow-md dark:shadow-light">
         <div class="max-w-7xl mx-auto flex items-center justify-between h-[104px] px-6">
 
             <!-- DIV 1: Logo + Nombre -->
@@ -18,7 +19,7 @@
                 <!-- Logo -->
                 <div class="size-20 flex items-center justify-center">
                     <img src="./assets/img/logo-black.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
-                    <img src="./assets/img/logo-black.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
+                    <img src="./assets/img/logo-white.png" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
                 </div>
                 <!-- Nombre -->
                 <div class="ml-3 text-3xl font-bold flex items-center">
@@ -31,7 +32,7 @@
                 <!-- Logo -->
                 <div class="size-20 flex items-center justify-center">
                     <img src="./assets/img/logo-black.svg" class="dark:hidden w-full h-full" alt="Logo Claro">
-                    <img src="./assets/img/logo-black.svg" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
+                    <img src="./assets/img/logo-white.png" class="hidden dark:block w-full h-full" alt="Logo Oscuro">
                 </div>
             </div>
             <div class="flex items-center cursor-pointer md:hidden flex"
@@ -100,18 +101,19 @@
 
     <!-- Contenido principal -->
     <main class="relative z-10">
-        <!-- INICIO -->
-        <section class="relative w-full h-screen bg-cover md:bg-contain bg-no-repeat bg-center"
-            style="background-image: url('./assets/img/GOKU.png'); background-position-y: 120px;">
-            <!-- Overlay para mejorar contraste -->
-            <!-- <div class="absolute inset-0 bg-white/50 dark:bg-black/50"></div> -->
+
+        <section class="relative w-full h-screen overflow-hidden">
+
+            <!-- Fondo con opacidad -->
+            <div class="absolute inset-0 bg-[url('../img/GOKU.png')] bg-cover md:bg-contain bg-no-repeat bg-center opacity-90 pointer-events-none"
+                style="background-position-y: 120px;"></div>
 
             <!-- Contenido centrado -->
             <div class="relative z-20 flex flex-col items-center justify-start h-full text-center px-4 pt-28">
 
                 <!-- Logos claro/oscuro -->
                 <img src="./assets/img/logo-black.svg" class="dark:hidden w-40 md:w-48 mb-4" alt="Logo Claro">
-                <img src="./assets/img/logo-black.svg" class="hidden dark:block w-40 md:w-48 mb-4" alt="Logo Oscuro">
+                <img src="./assets/img/logo-white.png" class="hidden dark:block w-40 md:w-48 mb-4" alt="Logo Oscuro">
 
                 <h1 class="text-4xl md:text-6xl font-bold text-white dark:text-gray-100">
                     Carta Digital de Tacos 🌮
@@ -134,12 +136,11 @@
 
 
         <!-- NO ES SEGURO -->
-        <section
-            class="h-screen flex flex-col items-center justify-center  text-white text-center px-4">
+        <section class="h-screen flex flex-col items-center justify-center  text-white text-center px-4">
 
             <!-- Logos claro/oscuro -->
             <img src="./assets/img/logo-black.svg" class="dark:hidden w-32 md:w-48 mb-4" alt="Logo Claro">
-            <img src="./assets/img/logo-black.svg" class="hidden dark:block w-32 md:w-48 mb-4" alt="Logo Oscuro">
+            <img src="./assets/img/logo-white.png" class="hidden dark:block w-32 md:w-48 mb-4" alt="Logo Oscuro">
 
             <!-- Nombre del local -->
             <h1 class="text-4xl md:text-6xl font-bold mb-2">
