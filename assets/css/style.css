@@ -572,14 +572,14 @@ body::after {
   background-repeat: repeat;
   background-size: 320px 160px;
   background-position: center;
-  opacity: 0.2;
+  opacity: 0.4;
   /* Controla la translucidez */
   pointer-events: none;
 }
 
 html.dark body::after {
   background-image: url('../img/fondo-black.webp');
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .pointer-events-none {
@@ -779,6 +779,10 @@ html.dark body::after {
 
 .bg-\[\#FFF8F0\]\/10 {
   background-color: rgb(255 248 240 / 0.1);
+}
+
+.bg-\[\#FFF8F0\]\/90 {
+  background-color: rgb(255 248 240 / 0.9);
 }
 
 .bg-gray-200 {
@@ -1001,8 +1005,12 @@ html.dark body::after {
   display: none;
 }
 
-.dark\:bg-\[\#000000\]\/90:is(.dark *) {
-  background-color: rgb(0 0 0 / 0.9);
+.dark\:bg-\[\#3b3c47\]\/10:is(.dark *) {
+  background-color: rgb(59 60 71 / 0.1);
+}
+
+.dark\:bg-\[\#3b3c47\]\/90:is(.dark *) {
+  background-color: rgb(59 60 71 / 0.9);
 }
 
 .dark\:bg-\[\#FFF8F0\]\/10:is(.dark *) {
@@ -1025,10 +1033,6 @@ html.dark body::after {
 
 .dark\:bg-gray-900\/80:is(.dark *) {
   background-color: rgb(17 24 39 / 0.8);
-}
-
-.dark\:bg-\[\#3b3c47\]\/80:is(.dark *) {
-  background-color: rgb(59 60 71 / 0.8);
 }
 
 .dark\:text-gray-100:is(.dark *) {
