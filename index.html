@@ -9,6 +9,7 @@
 </head>
 
 <!-- bg-[#FFF8F0]/10 dark:bg-gray-900/80 -->
+
 <body class="bg-[#FFF8F0] dark:bg-gray-900 text-black dark:text-white">
     <header class="fixed top-0 left-0 w-full bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 z-50 shadow-md dark:shadow-light">
         <div class="max-w-7xl mx-auto flex items-center justify-between h-[104px] px-6">
@@ -46,12 +47,11 @@
 
             <!-- DIV 2: Menú de secciones (Desktop) -->
             <nav class="hidden md:flex space-x-6 text-gray-900 dark:text-white font-bold">
-                <a href="#entrantes" class="hover:text-red-600 dark:hover:text-red-500">Entrantes</a>
-                <a href="#tacos" class="hover:text-red-600 dark:hover:text-red-500">Tacos</a>
-                <a href="#hamburguesas" class="hover:text-red-600 dark:hover:text-red-500">Hamburguesas</a>
-                <a href="#pizzas" class="hover:text-red-600 dark:hover:text-red-500">Pizzas</a>
-                <a href="#bebidas" class="hover:text-red-600 dark:hover:text-red-500">Bebidas</a>
-                <a href="#postres" class="hover:text-red-600 dark:hover:text-red-500">Postres</a>
+                <a href="#inicio" class="block hover:text-red-600 dark:hover:text-red-500">Inicio</a>
+                <a href="#carta" class="block hover:text-red-600 dark:hover:text-red-500">Carta</a>
+                <a href="#promociones" class="block hover:text-red-600 dark:hover:text-red-500">Promocion</a>
+                <a href="#ubicacion" class="block hover:text-red-600 dark:hover:text-red-500">Ubicación</a>
+                <a href="#contacto" class="block hover:text-red-600 dark:hover:text-red-500">Contacto</a>
             </nav>
 
             <!-- DIV 3: Dark Mode (Desktop) + Botón menú móvil -->
@@ -108,6 +108,17 @@
             <div class="absolute inset-0 bg-[url('../img/GOKU.png')] bg-cover md:bg-contain bg-no-repeat bg-center opacity-90 pointer-events-none"
                 style="background-position-y: 120px;"></div>
 
+            <div class="absolute inset-0
+                bg-gradient-to-b 
+                    from-stone-100/50 via-stone-100/30 to-transparent
+                    dark:from-stone-950/60 dark:via-stone-950/40
+                md:from-stone-100/60 md:via-stone-100/40
+                md:dark:from-stone-950/70 md:dark:via-stone-950/60
+                md:to-transparent">
+            </div>
+
+
+
             <!-- Contenido centrado -->
             <div class="relative z-20 flex flex-col items-center justify-start h-full text-center px-4 pt-28">
 
@@ -115,27 +126,27 @@
                 <img src="./assets/img/logo-black.svg" class="dark:hidden w-40 md:w-48 mb-4" alt="Logo Claro">
                 <img src="./assets/img/logo-white.png" class="hidden dark:block w-40 md:w-48 mb-4" alt="Logo Oscuro">
 
-                <h1 class="text-4xl md:text-6xl font-bold text-white dark:text-gray-100">
-                    Carta Digital de Tacos 🌮
+                <h1 class="text-6xl md:text-6xl font-bold text-stone-100 dark:text-stone-950">
+                    <span class="text-red-600">GO!</span>
+                    <span class="ml-1 text-gray-900 dark:text-white">TACOS</span>
                 </h1>
-                <p class="mt-4 text-lg md:text-2xl text-gray-200 dark:text-gray-300 max-w-2xl">
-                    Descubre nuestros tacos, combos y mucho más al instante.
-                </p>
+                <h3 class="mt-4 text-2xl md:text-2xl text-stone-950 dark:text-stone-100 font-mono font-bold max-w-2xl">
+                    Descubre nuestra carta
+                </h3>
+                <h3 class="mt-4 text-2xl md:text-2xl text-stone-950 dark:text-stone-100 font-mono max-w-2xl">
+                    Gran variedad <span class="font-bold">100%</span> halal
+                </h3>
                 <div class="mt-6 flex flex-col sm:flex-row gap-4">
                     <a href="#menu"
                         class="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition">
                         Ver menú
-                    </a>
-                    <a href="https://github.com/tu-repo" target="_blank"
-                        class="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-lg hover:bg-gray-900 transition">
-                        Ver en GitHub
                     </a>
                 </div>
             </div>
         </section>
 
 
-        <!-- NO ES SEGURO -->
+        <!-- SECCION MENÚ -->
         <section class="h-screen flex flex-col items-center justify-center  text-white text-center px-4">
 
             <!-- Logos claro/oscuro -->
