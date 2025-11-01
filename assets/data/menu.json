@@ -1,0 +1,574 @@
+{
+    "opcionesGlobales": {
+        "salsas": [
+            {
+                "nombre": "Andalouse",
+                "precio": 0
+            },
+            {
+                "nombre": "Algerine",
+                "precio": 0
+            },
+            {
+                "nombre": "Samurai",
+                "precio": 0
+            },
+            {
+                "nombre": "Biggy",
+                "precio": 0
+            },
+            {
+                "nombre": "Ketchup",
+                "precio": 0
+            },
+            {
+                "nombre": "Mayonesa",
+                "precio": 0
+            },
+            {
+                "nombre": "Pita",
+                "precio": 0
+            },
+            {
+                "nombre": "Barbacoa",
+                "precio": 0
+            },
+            {
+                "nombre": "Mostaza",
+                "precio": 0
+            },
+            {
+                "nombre": "Cheddar",
+                "precio": 0.5
+            },
+            {
+                "nombre": "Salsa extra",
+                "precio": 0.3
+            }
+        ],
+        "extras": [
+            {
+                "nombre": "Bacon de pavo",
+                "precio": 1
+            },
+            {
+                "nombre": "Cebolla caramelizada",
+                "precio": 1
+            },
+            {
+                "nombre": "Cebolla frita",
+                "precio": 0.5
+            },
+            {
+                "nombre": "Queso azul",
+                "precio": 1
+            },
+            {
+                "nombre": "Queso de cabra",
+                "precio": 1
+            },
+            {
+                "nombre": "Queso cheddar",
+                "precio": 0.5
+            },
+            {
+                "nombre": "Pepinillos",
+                "precio": 1
+            },
+            {
+                "nombre": "Jalapeños",
+                "precio": 1
+            },
+            {
+                "nombre": "Huevo",
+                "precio": 1
+            },
+            {
+                "nombre": "Doble carne",
+                "precio": 1
+            }
+        ],
+        "opcionesEspeciales": {
+            "tamanos": [
+                {
+                    "nombre": "XL",
+                    "incremento": 2
+                },
+                {
+                    "nombre": "2XL",
+                    "incremento": 4
+                }
+            ],
+            "hazloMenu": [
+                {
+                    "nombre": "Hazlo Menú",
+                    "incremento": 2
+                }
+            ]
+        }
+    },
+    "baseIngredientes": {
+        "tacos": "Tortilla de trigo rellena con una o dos carnes a elegir, salsa de queso casera, 2 salsas a elegir y patatas fritas normales o gajo (+0.50€).",
+        "pizzas": "Masa, queso mozzarella y tomate natural.",
+        "hamburguesas": "Pan brioche, salsa de queso y 2 salsas a elegir.",
+        "wraps": "Tortilla de trigo con una o dos carnes a elegir, lechuga, tomate, salsa de queso casera y 2 salsas a elegir.",
+        "paninis": "Barrita de pan rellena con carne a elegir, salsa de queso casera y 2 salsas a elegir."
+    },
+    "opcionesEspecialesPorCategoria": {
+        "tacos": [
+            {
+                "nombre": "Gratinar",
+                "incremento": 1
+            }
+        ]
+    },
+    "categorias": {
+        "entrantes": [
+            {
+                "nombre": "Patatas Fritas",
+                "descripcion": "",
+                "precio": 1.5
+            },
+            {
+                "nombre": "Bacon Cheese Fries",
+                "descripcion": "",
+                "precio": 3.5
+            },
+            {
+                "nombre": "Tequeños (6 unidades)",
+                "descripcion": "",
+                "precio": 4.5
+            },
+            {
+                "nombre": "Bolitas de Queso (6 uds)",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Alitas de Pollo (5 uds)",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Alitas Barbacoa (5 uds)",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Nuggets de Pollo (6 uds)",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Fingers de Pollo (6 uds)",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Ensalada César",
+                "descripcion": "",
+                "precio": 4.0
+            }
+        ],
+        "tacos": [
+            {
+                "nombre": "Pollo",
+                "descripcion": "",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Ternera",
+                "descripcion": "",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Mixto (Pollo y Ternera)",
+                "descripcion": "",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Pollo Crispy",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Kebab",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Nuggets",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Fingers",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Cordon Bleu",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Salchichas",
+                "descripcion": "",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Atún",
+                "descripcion": "",
+                "precio": 6.5
+            }
+        ],
+        "pizzas": {
+            "deLaCasa": [
+                {
+                    "nombre": "Margarita",
+                    "descripcion": "Albahaca",
+                    "precio": 7.0
+                },
+                {
+                    "nombre": "Cuatro Quesos",
+                    "descripcion": "Queso azul, queso cheddar, queso gouda, salsa de queso y albahaca",
+                    "precio": 8.0
+                },
+                {
+                    "nombre": "Ternera",
+                    "descripcion": "Carne picada de ternera y orégano",
+                    "precio": 9.0
+                },
+                {
+                    "nombre": "Pollo",
+                    "descripcion": "Pollo y orégano",
+                    "precio": 9.0
+                },
+                {
+                    "nombre": "Salchichas",
+                    "descripcion": "Salchichas de pollo y orégano",
+                    "precio": 10.0
+                },
+                {
+                    "nombre": "Kebab",
+                    "descripcion": "Kebab de pollo y orégano",
+                    "precio": 10.0
+                },
+                {
+                    "nombre": "Atún",
+                    "descripcion": "Atún y orégano",
+                    "precio": 10.0
+                },
+                {
+                    "nombre": "Frutos de Mar",
+                    "descripcion": "Gambas, calamares, surimi y orégano",
+                    "precio": 10.0
+                }
+            ],
+            "alGusto": {
+                "maxIngredientes": 3,
+                "ingredientesOpcionales": [
+                    "Ternera",
+                    "Pollo",
+                    "Kebab",
+                    "Salchichas",
+                    "Bacon de pavo",
+                    "Atún",
+                    "Frutos del mar",
+                    "Aceitunas negras",
+                    "Cebolla caramelizada",
+                    "Queso azul",
+                    "Queso de cabra",
+                    "Queso cheddar"
+                ]
+            }
+        },
+        "hamburguesas": [
+            {
+                "nombre": "Hamburguesa Ternera",
+                "descripcion": "Ternera, queso cheddar, lechuga, tomate, cebolla frita",
+                "precio": 5.5
+            },
+            {
+                "nombre": "Hamburguesa Pollo",
+                "descripcion": "Pollo frito, lechuga, tomate, cebolla frita",
+                "precio": 5.5
+            },
+            {
+                "nombre": "H. Pollo a la Plancha",
+                "descripcion": "Pollo a la plancha, lechuga, tomate, cebolla frita",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Hamburguesa Pollo Crispy",
+                "descripcion": "Pollo crujiente, lechuga, tomate, cebolla frita",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Hamburguesa de la Casa 🌟",
+                "descripcion": "Ternera, lechuga, tomate, pepinillos, huevo, cebolla frita",
+                "precio": 8.0
+            }
+        ],
+        "wraps": [
+            {
+                "nombre": "Pollo",
+                "descripcion": "Pollo",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Ternera",
+                "descripcion": "Ternera",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Mixto (Pollo y Ternera)",
+                "descripcion": "Pollo y Ternera",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Pollo Crispy",
+                "descripcion": "Pollo Crispy",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Kebab",
+                "descripcion": "Kebab",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Nuggets",
+                "descripcion": "Nuggets",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Fingers",
+                "descripcion": "Fingers",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Cordon Bleu",
+                "descripcion": "Cordon Bleu",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Salchichas",
+                "descripcion": "Salchichas",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Atún",
+                "descripcion": "Atún",
+                "precio": 6.5
+            }
+        ],
+        "paninis": [
+            {
+                "nombre": "Pollo",
+                "descripcion": "Pollo",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Ternera",
+                "descripcion": "Ternera",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Mixto (Pollo y Ternera)",
+                "descripcion": "Pollo y Ternera",
+                "precio": 6.0
+            },
+            {
+                "nombre": "Pollo Crispy",
+                "descripcion": "Pollo Crispy",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Kebab",
+                "descripcion": "Kebab",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Nuggets",
+                "descripcion": "Nuggets",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Fingers",
+                "descripcion": "Fingers",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Cordon Bleu",
+                "descripcion": "Cordon Bleu",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Salchichas",
+                "descripcion": "Salchichas",
+                "precio": 6.5
+            },
+            {
+                "nombre": "Atún",
+                "descripcion": "Atún",
+                "precio": 6.5
+            }
+        ],
+        "postres": [
+            {
+                "nombre": "Tarta de Lotus",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Tarta de Queso",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Tarta de Oreo",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Tarta de Chips Ahoy",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Tiramisú",
+                "descripcion": "",
+                "precio": 4.0
+            },
+            {
+                "nombre": "Milhojas",
+                "descripcion": "",
+                "precio": 4.0
+            }
+        ],
+        "bebidas": [
+            {
+                "categoria": "Agua",
+                "productos": [
+                    {
+                        "nombre": "Agua",
+                        "precio": 1.0
+                    }
+                ]
+            },
+            {
+                "categoria": "Refrescos",
+                "productos": [
+                    {
+                        "nombre": "CocaCola",
+                        "precio": 2.0
+                    },
+                    {
+                        "nombre": "Fanta de Limón",
+                        "precio": 2.0
+                    },
+                    {
+                        "nombre": "Fanta de Naranja",
+                        "precio": 2.0
+                    }
+                ]
+            },
+            {
+                "categoria": "Bebidas Energéticas",
+                "productos": [
+                    {
+                        "nombre": "Bebida Energética",
+                        "precio": 2.5
+                    }
+                ]
+            },
+            {
+                "categoria": "Batidos",
+                "productos": [
+                    {
+                        "nombre": "Oreo",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Chips Ahoy (Cookies)",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Kinder Bueno",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Lotus",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Huesitos",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Kit Kat",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Twix",
+                        "precio": 3.5
+                    }
+                ]
+            },
+            {
+                "categoria": "Smoothies",
+                "productos": [
+                    {
+                        "nombre": "Fresa",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Frutos Rojos",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Arándanos",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Piña",
+                        "precio": 3.5
+                    },
+                    {
+                        "nombre": "Tropical (Mango, Papaya, Melocotón)",
+                        "precio": 3.5
+                    }
+                ]
+            },
+            {
+                "categoria": "Café",
+                "productos": [
+                    {
+                        "nombre": "Café con leche",
+                        "precio": 1.5
+                    },
+                    {
+                        "nombre": "Café con hielo",
+                        "precio": 1.3
+                    },
+                    {
+                        "nombre": "Espresso",
+                        "precio": 1.3
+                    },
+                    {
+                        "nombre": "Cortado",
+                        "precio": 1.4
+                    },
+                    {
+                        "nombre": "Capuccino",
+                        "precio": 1.7
+                    },
+                    {
+                        "nombre": "Americano",
+                        "precio": 1.3
+                    }
+                ]
+            }
+        ]
+    }
+}

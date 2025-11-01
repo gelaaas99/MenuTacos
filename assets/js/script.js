@@ -17,6 +17,28 @@
 //   mobileMenu.classList.toggle("hidden");
 // });
 
+// PARA QUE DESAPAREZCA AL HACER SCROLL HACIA ARRIBA Y APAREZCA AL HACER SCROLL HACIA ABAJO 
+let lastScrollY = window.scrollY;
+const header = document.getElementById("main-header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY && window.scrollY > 100) {
+    // Scroll hacia arriba → ocultar header
+    header.classList.add("-translate-y-full");
+    
+  } else {
+      // Scroll hacia abajo → mostrar header
+    header.classList.remove("-translate-y-full");
+  }
+  lastScrollY = window.scrollY;
+});
+
+
+
+
+
+
+
 // Dark Mode Desktop
 const toggleDesktop = document.querySelector("#theme-toggle-desktop");
 toggleDesktop.addEventListener("click", () => {
