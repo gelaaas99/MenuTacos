@@ -150,25 +150,13 @@
         <!-- SECCIÓN CARTA -->
 
         <nav id="nav-categorias"
-            class="sticky top-0 z-10 bg-white dark:bg-stone-900 flex gap-3 overflow-x-auto py-3 px-4 text-sm font-semibold border-b border-gray-200 dark:border-white">
-            <!-- Los botones se generan automáticamente desde JS -->
+            class="sticky top-0 z-50 bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 shadow-md dark:shadow-light transition-transform duration-300 flex justify-start gap-3 py-3 px-4 text-sm font-semibold border-b border-gray-200 dark:border-white overflow-x-auto max-w-full">
+            <!-- Aquí van los botones generados por JS -->
         </nav>
 
         <section id="carta" class="max-w-5xl mx-auto px-6 py-8 space-y-12">
-            <div>
-                <nav>
-
-                </nav>
-                <section>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                    <article></article>
-                </section>
-            </div>
-
+            <!-- Se genera todo desde JS -->
+            <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
         </section>
 
 
@@ -245,38 +233,244 @@
             </div>
         </section>
 
+        <!-- PROMOCIONES -->
+        <section id="promociones" class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+            <h2 class="text-3xl font-bold text-center mb-6">Promociones</h2>
 
+            <div id="promos-dinamico" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
 
+                <!-- Promo 1 -->
+                <article
+                    class="flex items-start gap-4 p-4 border rounded-lg backdrop-blur-[3px] shadow-md border-red-500 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="text-2xl">🔥</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-stone-950 dark:text-stone-100">¡OFFERTÓN!</h3>
+                        <p class="text-sm text-stone-950 dark:text-stone-100">
+                            Martes y Jueves: Tu taco de pollo, ternera o mixto por solo
+                            <span class="font-bold text-red-500">6€</span>
+                        </p>
+                    </div>
+                </article>
 
+                <!-- Promo 2 -->
+                <article
+                    class="flex items-start gap-4 p-4 border rounded-lg backdrop-blur-[3px] shadow-md border-red-500 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="text-2xl">💥</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-stone-950 dark:text-stone-100">Promo Doble Taco</h3>
+                        <p class="text-sm text-stone-950 dark:text-stone-100">
+                            2 tacos a elegir por solo
+                            <span class="font-bold text-red-500">7€</span> — todos los días.
+                        </p>
+                    </div>
+                </article>
 
+                <!-- Promo 3 -->
+                <article
+                    class="flex items-start gap-4 p-4 border rounded-lg backdrop-blur-[3px] shadow-md border-red-500 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="text-2xl">🥤</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-stone-950 dark:text-stone-100">Bebida GRATIS</h3>
+                        <p class="text-sm text-stone-950 dark:text-stone-100">
+                            Pide cualquier menú y llévate una bebida gratis.
+                        </p>
+                    </div>
+                </article>
 
+                <!-- Promo 4 -->
+                <article
+                    class="flex items-start gap-4 p-4 border rounded-lg backdrop-blur-[3px] shadow-md border-red-500 hover:shadow-lg transition transform hover:scale-105">
+                    <div class="text-2xl">⭐</div>
+                    <div>
+                        <h3 class="font-bold text-xl text-stone-950 dark:text-stone-100">Menú Especial del Día</h3>
+                        <p class="text-sm text-stone-950 dark:text-stone-100">
+                            Taco + Nachos pequeños por solo
+                            <span class="font-bold text-red-500">8€</span>.
+                        </p>
+                    </div>
+                </article>
 
-
-        <!-- SECCION MENÚ -->
-        <section class="h-screen flex flex-col items-center justify-center  text-white text-center px-4">
-
-            <!-- Logos claro/oscuro -->
-            <img src="./assets/img/logo-black.svg" class="dark:hidden w-32 md:w-48 mb-4" alt="Logo Claro">
-            <img src="./assets/img/logo-white.png" class="hidden dark:block w-32 md:w-48 mb-4" alt="Logo Oscuro">
-
-            <!-- Nombre del local -->
-            <h1 class="text-4xl md:text-6xl font-bold mb-2">
-                <span class="text-white dark:text-red-500">GO!</span> TACOS
-            </h1>
-
-            <!-- Oferta -->
-            <p class="text-xl md:text-2xl font-semibold">
-                Los martes y jueves tu taco por tan solo <span class="text-yellow-300">5€</span>!
-            </p>
-
-            <!-- Botón ver menú (opcional) -->
-            <a href="#menu"
-                class="mt-6 px-6 py-3 bg-white dark:bg-gray-800 text-red-600 dark:text-white rounded-full font-bold hover:bg-gray-100 dark:hover:bg-gray-700 transition">
-                Ver menú
-            </a>
-
+            </div>
         </section>
+
+
+
+        <!-- UBICACION -->
+        <section id="ubicacion" class="max-w-5xl mx-auto px-6 py-12">
+
+            <!-- TITULO CENTRADO -->
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
+                Ubicación
+            </h2>
+
+            <!-- GRID: 1 columna móvil / 2 columnas desktop -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                <!-- MAPA (primero en móvil, izquierda en desktop) -->
+                <div class="order-1 md:order-1 relative">
+
+                    <!-- Overlay clicable SOLO EN MÓVIL -->
+                    <a href="https://www.google.com/maps?q=C.+Luis+Sauquillo,+93,+28944+Fuenlabrada,+Madrid,+España"
+                        target="_blank" class="absolute inset-0 z-10 block md:hidden"></a>
+
+                    <!-- Iframe -->
+                    <iframe class="w-full rounded-xl border-4
+                           md:h-80 md:w-full
+                           h-96 w-full
+                           border-black dark:border-white" loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.486321904747!2d-3.806778424027474!3d40.28299916686159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418cffcb1f40bb%3A0xe5b2f7a8f0ef6e7d!2sC.%20Luis%20Sauquillo%2C%2093%2C%2028944%20Fuenlabrada%2C%20Madrid!5e0!3m2!1ses!2ses!4v1732878250000!5m2!1ses!2ses">
+                    </iframe>
+                </div>
+
+                <!-- TEXTO (segundo en móvil, derecha en desktop) -->
+                <div class="order-2 md:order-2 block p-4 rounded-lg text-gray-900 dark:text-gray-100">
+
+                    <p class="mb-2 text-lg font-semibold">
+                        📍 Dirección:
+                    </p>
+
+                    <p class="mb-2">
+                        <a href="https://www.google.com/maps?q=C.+Luis+Sauquillo,+93,+28944+Fuenlabrada,+Madrid,+España"
+                            target="_blank"
+                            class="text-blue-600 dark:text-blue-400 hover:underline transition-transform transform hover:-translate-y-1 hover:scale-105 duration-300">
+                            C. Luis Sauquillo, 93,<br>
+                            28944 Fuenlabrada, Madrid, España
+                        </a>
+                    </p>
+
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Estamos ubicados muy cerca del McDonald's de Luis Sauquillo, con fácil acceso.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <!-- CONTACTO -->
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="max-w-5xl mx-auto px-6 py-12 space-y-6">
+            <header class="space-y-2">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                    Contacto
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-300">
+                    Haz tu pedido, consúltanos dudas o encarga para llevar. Te atendemos por teléfono, WhatsApp o redes.
+                </p>
+            </header>
+
+            <div class="grid gap-8 md:grid-cols-2">
+                <!-- Columna 1: Teléfonos + WhatsApp -->
+                <div class="space-y-4 text-sm text-gray-800 dark:text-gray-200">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                            Teléfono y WhatsApp
+                        </p>
+                        <p class="mt-1">
+                            Móvil / WhatsApp:<br>
+                            <a href="tel:+34613726739"
+                                class="font-semibold underline underline-offset-2 decoration-amber-500">
+                                +34 613 72 67 39
+                            </a>
+                        </p>
+                        <p class="mt-1">
+                            Escríbenos directamente por WhatsApp:<br>
+                            <a href="https://wa.me/34613726739"
+                                class="underline underline-offset-2 decoration-amber-500" target="_blank"
+                                rel="noopener noreferrer">
+                                Abrir chat de WhatsApp
+                            </a>
+                        </p>
+                        <p class="mt-3">
+                            Teléfono fijo:<br>
+                            <a href="tel:+34910000000" class="underline underline-offset-2 decoration-amber-500">
+                                91 000 00 00
+                            </a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                            Dirección
+                        </p>
+                        <p class="mt-1">
+                            C. Luis Sauquillo, 93<br>
+                            28944 Fuenlabrada, Madrid, España
+                        </p>
+                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                            *La ubicación detallada la tienes en la sección “Ubicación”.*
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Horario + Redes -->
+                <div class="space-y-5 text-sm text-gray-800 dark:text-gray-200">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                            Horario
+                        </p>
+                        <p class="mt-1">
+                            🗓️ <span class="font-medium">Todos los días</span><br>
+                            ⏰ 14:00 – 00:00
+                        </p>
+                        <p class="mt-2">
+                            🗓️ <span class="font-medium">Miércoles</span><br>
+                            ⏰ 20:00 – 00:00
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-300">
+                            Redes sociales
+                        </p>
+                        <ul class="mt-2 space-y-1">
+                            <li>
+                                Instagram:
+                                <a href="https://instagram.com/go.tacos"
+                                    class="underline underline-offset-2 decoration-amber-500" target="_blank"
+                                    rel="noopener noreferrer">
+                                    @go.tacos
+                                </a>
+                            </li>
+                            <li>
+                                TikTok:
+                                <a href="https://www.tiktok.com/@go.tacos"
+                                    class="underline underline-offset-2 decoration-amber-500" target="_blank"
+                                    rel="noopener noreferrer">
+                                    @go.tacos
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
     </main>
+
+
+    <footer
+        class="relative bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 dark:from-gray-800 dark:via-gray-900 dark:to-gray-700 text-white py-8">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <!-- Mensaje principal -->
+            <p class="text-lg font-semibold">© 2025 MiPágina. Todos los derechos reservados.</p>
+
+            <!-- Mensaje secundario -->
+            <p class="text-sm opacity-80">Diseñado con cuidado para tu experiencia</p>
+        </div>
+
+        <!-- Decoración sutil -->
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-white/20 dark:bg-gray-400/20"></div>
+    </footer>
+
+
+
 
 
 
