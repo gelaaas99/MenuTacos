@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="es-ES" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GO! Tacos Fuenlabrada | Tacos, hamburguesas, pizzas y más</title>
+    <meta name="description"
+        content="GO! Tacos es un local de comida rápida en Fuenlabrada (Madrid) con tacos, hamburguesas, pizzas, wraps y más. Consulta la carta, promociones y ubicación y pide para llevar o recoger.">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -104,7 +106,7 @@
     <main class="relative z-10">
 
         <!-- SECCION INICIO -->
-        <section class="relative w-full h-screen overflow-hidden">
+        <section id="inicio" class="relative w-full h-screen overflow-hidden">
 
             <!-- Fondo con opacidad -->
             <div class="absolute inset-0 bg-[url('../img/GOKU.png')] bg-cover md:bg-contain bg-no-repeat bg-center opacity-90 pointer-events-none"
@@ -139,7 +141,7 @@
                     Gran variedad <span class="font-bold">100%</span> halal
                 </h3>
                 <div class="mt-6 flex flex-col sm:flex-row gap-4">
-                    <a href="#menu"
+                    <a href="#carta-title"
                         class="px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition">
                         Ver menú
                     </a>
@@ -148,94 +150,42 @@
         </section>
 
         <!-- SECCIÓN CARTA -->
+        <!-- <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
+            Menu
+        </h2>
 
         <nav id="nav-categorias"
             class="sticky top-0 z-50 bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 shadow-md dark:shadow-light transition-transform duration-300 flex justify-start gap-3 py-3 px-4 text-sm font-semibold border-b border-gray-200 dark:border-white overflow-x-auto max-w-full">
-            <!-- Aquí van los botones generados por JS -->
+             Aquí van los botones generados por JS --><!--
         </nav>
 
         <section id="carta" class="max-w-5xl mx-auto px-6 py-8 space-y-12">
-            <!-- Se genera todo desde JS -->
+            Se genera todo desde JS --><!--
             <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
-        </section>
+        </section> -->
+        <!-- SECCIÓN CARTA -->
+<section id="carta"
+         aria-labelledby="carta-title"
+         class="max-w-5xl mx-auto px-6 py-8 space-y-12 scroll-mt-32">
+  <h2 id="carta-title"
+      class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
+      Menú
+  </h2>
+
+  <nav id="nav-categorias"
+       class="sticky top-28 z-40 bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 shadow-md dark:shadow-light transition-transform duration-300 flex justify-start gap-3 py-3 px-4 text-sm font-semibold border-b border-x rounded-b-lg border-gray-200 dark:border-white overflow-x-auto max-w-full">
+      <!-- Aquí van los botones generados por JS -->
+  </nav>
+
+  <!-- Se genera todo desde JS -->
+  <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
+</section>
 
 
-        <section class="max-w-5xl mx-auto px-6 py-8 space-y-12">
-            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">🌮 Tacos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 m-2">
-
-                <!-- 🧱 Prototipo 1: Clásico limpio -->
-                <article class="border rounded-lg p-6 shadow-sm bg-white dark:bg-stone-900">
-                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Taco clásico</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">Carne, cebolla, cilantro</p>
-                    <span class="block mt-2 font-bold text-gray-800 dark:text-white">$2.80</span>
-                </article>
-
-                <!-- 🎯 Prototipo 2: Con fondo destacado -->
-                <article
-                    class="rounded-lg p-4 bg-red-50 dark:bg-red-900 shadow-md border border-red-200 dark:border-red-700">
-                    <h3 class="font-semibold text-lg text-red-800 dark:text-red-100">Taco picante</h3>
-                    <p class="text-sm text-red-700 dark:text-red-200">Carne, jalapeños, salsa roja</p>
-                    <span class="block mt-2 font-bold text-red-900 dark:text-red-100">$3.20</span>
-                </article>
-
-                <!-- 🧊 Prototipo 3: Tarjeta con borde lateral -->
-                <article class="border-l-4 border-blue-500 bg-white dark:bg-stone-800 p-4 shadow-sm">
-                    <h3 class="font-semibold text-lg text-blue-700 dark:text-blue-300">Taco vegetariano</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">Champiñones, pimientos, queso</p>
-                    <span class="block mt-2 font-bold text-blue-800 dark:text-blue-200">$2.50</span>
-                </article>
-
-                <!-- 🧪 Prototipo 4: Tarjeta con icono y layout horizontal -->
-                <article class="flex items-start gap-4 p-4 border rounded-lg bg-white dark:bg-stone-900 shadow-sm">
-                    <div class="text-2xl">🌱</div>
-                    <div>
-                        <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Taco verde</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-300">Lechuga, aguacate, lima</p>
-                        <span class="block mt-2 font-bold text-gray-800 dark:text-white">$2.70</span>
-                    </div>
-                </article>
-
-                <!-- 🫧 Prototipo 5: Fondo completamente transparente -->
-                <article class="border border-gray-300 dark:border-gray-700 rounded-lg p-4 shadow-sm bg-transparent">
-                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Taco invisible</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">Sin fondo, solo contenido</p>
-                    <span class="block mt-2 font-bold text-gray-800 dark:text-white">$2.90</span>
-                </article>
-
-                <!-- 🌫️ Prototipo 6: Fondo semitransparente claro -->
-                <article
-                    class="rounded-lg p-4 shadow-md bg-white/60 dark:bg-stone-900/60 border border-gray-200 dark:border-gray-700 backdrop-blur-sm">
-                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Taco nube</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">Fondo blanco translúcido con blur</p>
-                    <span class="block mt-2 font-bold text-gray-800 dark:text-white">$3.10</span>
-                </article>
-
-                <!-- 🧊 Prototipo 7: Fondo semitransparente con borde lateral -->
-                <article
-                    class="border-l-4 border-green-500 bg-white/40 dark:bg-stone-800/40 p-4 shadow-sm backdrop-blur-md">
-                    <h3 class="font-semibold text-lg text-green-700 dark:text-green-300">Taco fresco</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-300">Con borde verde y fondo translúcido</p>
-                    <span class="block mt-2 font-bold text-green-800 dark:text-green-200">$2.60</span>
-                </article>
-
-                <!-- 🧪 Prototipo 8: Layout horizontal con fondo transparente -->
-                <article
-                    class="flex items-start gap-4 p-4 border dark:border-white rounded-lg backdrop-blur-[3px] shadow-md dark:shadow-[0_4px_6px_rgba(255,248,240,0.1)] border-black">
-                    <div class="text-2xl">🌮</div>
-                    <div>
-                        <h3 class="font-bold text-xl text-stone-950 dark:text-stone-100">Taco aire</h3>
-                        <p class="text-sm text-stone-950 dark:text-stone-100">Diseño horizontal sin fondo</p>
-                        <span class="block mt-2 font-bold text-stone-950 dark:text-stone-100">$2.75</span>
-                    </div>
-                </article>
-
-            </div>
-        </section>
 
         <!-- PROMOCIONES -->
-        <section id="promociones" class="max-w-5xl mx-auto px-6 py-8 space-y-8">
-            <h2 class="text-3xl font-bold text-center mb-6">Promociones</h2>
+        <section id="promociones" class="max-w-5xl mx-auto px-6 py-8 space-y-8 scroll-mt-32">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">Promociones</h2>
 
             <div id="promos-dinamico" class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
 
@@ -296,7 +246,7 @@
 
 
         <!-- UBICACION -->
-        <section id="ubicacion" class="max-w-5xl mx-auto px-6 py-12">
+        <section id="ubicacion" class="max-w-5xl mx-auto px-6 py-12 scroll-mt-32">
 
             <!-- TITULO CENTRADO -->
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
@@ -348,12 +298,10 @@
         </section>
 
 
-
-        <!-- CONTACTO -->
         <!-- SECCIÓN CONTACTO -->
-        <section id="contacto" class="max-w-5xl mx-auto px-6 py-12 space-y-6">
+        <section id="contacto" class="max-w-5xl mx-auto px-6 py-12 space-y-6 scroll-mt-32">
             <header class="space-y-2">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
                     Contacto
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-300">
@@ -459,7 +407,7 @@
         class="relative bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 dark:from-gray-800 dark:via-gray-900 dark:to-gray-700 text-white py-8">
         <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <!-- Mensaje principal -->
-            <p class="text-lg font-semibold">© 2025 MiPágina. Todos los derechos reservados.</p>
+            <p class="text-lg font-semibold">© 2025 GO! Tacos Fuenlabrada. Todos los derechos reservados.</p>
 
             <!-- Mensaje secundario -->
             <p class="text-sm opacity-80">Diseñado con cuidado para tu experiencia</p>
