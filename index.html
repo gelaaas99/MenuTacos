@@ -7,6 +7,11 @@
     <title>GO! Tacos Fuenlabrada | Tacos, hamburguesas, pizzas y más</title>
     <meta name="description"
         content="GO! Tacos es un local de comida rápida en Fuenlabrada (Madrid) con tacos, hamburguesas, pizzas, wraps y más. Consulta la carta, promociones y ubicación y pide para llevar o recoger.">
+    <!-- Favicon para modo claro -->
+    <link rel="icon" href="./assets/img/logo-black.ico" media="(prefers-color-scheme: light)">
+
+    <!-- Favicon para modo oscuro -->
+    <link rel="icon" href="./assets/img/logo-white.png" media="(prefers-color-scheme: dark)">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
@@ -164,22 +169,19 @@
             <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
         </section> -->
         <!-- SECCIÓN CARTA -->
-<section id="carta"
-         aria-labelledby="carta-title"
-         class="max-w-5xl mx-auto px-6 py-8 space-y-12 scroll-mt-32">
-  <h2 id="carta-title"
-      class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
-      Menú
-  </h2>
+        <section id="carta" aria-labelledby="carta-title" class="max-w-5xl mx-auto px-6 py-8 space-y-12 scroll-mt-32">
+            <h2 id="carta-title" class="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
+                Menú
+            </h2>
 
-  <nav id="nav-categorias"
-       class="sticky top-28 z-40 bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 shadow-md dark:shadow-light transition-transform duration-300 flex justify-start gap-3 py-3 px-4 text-sm font-semibold border-b border-x rounded-b-lg border-gray-200 dark:border-white overflow-x-auto max-w-full">
-      <!-- Aquí van los botones generados por JS -->
-  </nav>
+            <nav id="nav-categorias"
+                class="sticky top-28 z-40 bg-[#FFF8F0]/90 dark:bg-[#3b3c47]/90 shadow-md dark:shadow-light transition-transform duration-300 flex justify-start gap-3 py-3 px-4 text-sm font-semibold border-b border-x rounded-b-lg border-gray-200 dark:border-white overflow-x-auto max-w-full">
+                <!-- Aquí van los botones generados por JS -->
+            </nav>
 
-  <!-- Se genera todo desde JS -->
-  <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
-</section>
+            <!-- Se genera todo desde JS -->
+            <div id="menu-dinamico" class="grid gap-4 sm:grid-cols-2"></div>
+        </section>
 
 
 
