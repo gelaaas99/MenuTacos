@@ -75,7 +75,7 @@ async function cargarMenu() {
             // Crear tarjeta de categoría
             const card = document.createElement("article");
             card.className =
-                "scroll-mt-24 p-4 border dark:border-white rounded-lg backdrop-blur-[3px] shadow-md dark:shadow-[0_4px_6px_rgba(255,248,240,0.1)] border-black";
+                "scroll-mt-[160px] p-4 border dark:border-white rounded-lg backdrop-blur-[3px] shadow-md dark:shadow-[0_4px_6px_rgba(255,248,240,0.1)] border-black";
             card.id = `cat-${nombreCategoria}`;
 
             // Título grande
@@ -142,8 +142,29 @@ async function cargarMenu() {
 
 function scrollToSection(nombre) {
     const section = document.querySelector(`#cat-${nombre}`);
-    if (section) section.scrollIntoView({ behavior: "smooth" });
+    if (!section) return;
+
+    const mainHeader = document.getElementById("main-header");
+    const cartaHeader = document.getElementById("nav-categorias");
+
+    const mainHeight = mainHeader ? mainHeader.offsetHeight : 0;
+    const cartaHeight = cartaHeader ? cartaHeader.offsetHeight : 0;
+
+    // Margen extra para que no quede pegado
+    const extra = 8;
+
+    // Posición absoluta de la sección en la página
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+    // Queremos que el top de la tarjeta quede JUSTO debajo del header + nav-carta
+    const targetScroll = sectionTop - (mainHeight + cartaHeight + extra);
+
+    window.scrollTo({
+        top: targetScroll,
+        behavior: "smooth",
+    });
 }
+
 
 
 

@@ -833,6 +833,10 @@ html.dark body::after {
   scroll-margin-top: 6rem;
 }
 
+.scroll-mt-\[160px\] {
+  scroll-margin-top: 160px;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
