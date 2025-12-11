@@ -111,13 +111,13 @@ async function cargarMenu() {
             // Título grande
             const title = document.createElement("h2");
             title.className =
-                "font-bold text-2xl mb-3 text-stone-950 dark:text-stone-100";
+                "font-bold text-2xl mb-4 text-stone-950 dark:text-stone-100";
             title.textContent = nombreCategoria.toUpperCase();
             card.appendChild(title);
 
             // LISTA DE PRODUCTOS
             const ul = document.createElement("ul");
-            ul.className = "space-y-2";
+            ul.className = "grid gap-y-2 gap-x-8 md:grid-cols-2";
 
             // Caso especial bebidas
             if (nombreCategoria === "bebidas") {
@@ -172,6 +172,9 @@ async function cargarMenu() {
             menuDinamico.appendChild(card);
         });
 
+        // 👇 NUEVO: crear indicador de scroll horizontal ">>" en móvil
+        crearIndicadorScroll(navCategorias);
+
     } catch (error) {
         console.error("Error cargando menú:", error);
     }
@@ -212,5 +215,49 @@ if (footerYearEl) {
 
 
 
+
+function crearIndicadorScroll(navCategorias) {
+    if (!navCategorias) return;
+
+    // Si ya existe de antes, lo quitamos para no duplicar
+    let hint = document.getElementById("nav-categorias-hint");
+    if (hint) {
+        hint.remove();
+    }
+
+    // Contenedor del indicador (invisible, solo flechas)
+    hint = document.createElement("div");
+    hint.id = "nav-categorias-hint";
+    hint.className =
+        "pointer-events-none absolute -top-[0.3125rem] right-0 flex items-center md:hidden";
+
+    // Caja de las flechas (sin altura fija, solo el texto grande)
+    hint.innerHTML = `
+        <div class="mt-0 flex items-center justify-end">
+            <span class="text-5xl font-black text-amber-400 animate-pulse tracking-tight">
+                &raquo;
+            </span>
+        </div>
+    `;
+
+    // Pegamos el hint dentro del propio nav
+    navCategorias.appendChild(hint);
+
+    const updateHintVisibility = () => {
+        const hasOverflow = navCategorias.scrollWidth > navCategorias.clientWidth + 1;
+        const isScrolled = navCategorias.scrollLeft > 4;
+
+        // Solo mostramos las flechas si:
+        // - hay overflow horizontal
+        // - y todavía no se ha hecho scroll
+        hint.style.opacity = hasOverflow && !isScrolled ? "1" : "0";
+    };
+
+    navCategorias.addEventListener("scroll", updateHintVisibility);
+    window.addEventListener("resize", updateHintVisibility);
+
+    // Estado inicial
+    updateHintVisibility();
+}
 
 
